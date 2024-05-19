@@ -14,6 +14,7 @@ type Request struct {
 
 func main() {
 	http.HandleFunc("/request", requestHandler)
+	log.Printf("server started at port 8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
